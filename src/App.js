@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from 'react';
 import Button from "./components/UI/Button";
+import ParagraphOutput from "./components/Output/ParagraphOutput"
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <h1>React под Капотом</h1>
-      {isParagraphShown && <p>New Paragraph</p>}
+      <ParagraphOutput isShown={isParagraphShown} />
       <Button onClick={toggleParagraph}>Показать / Скрыть</Button>
     </div>
   );
